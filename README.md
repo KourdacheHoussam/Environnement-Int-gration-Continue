@@ -21,5 +21,9 @@ Mettre en place un environnement d'intégration continue Jenkins (Maven, Git)
 # Installer/Configurer Jenkins et maven
    
    Nous allons télécharger Jenkins que l'on va lancer sur un serveur local et qu'on va ouvrir sur un navigateur internet
-   * Pour télécharger : https://jenkins.io/index.html   : on peut le télécharger en .war que l'on démarera par la commande : java -jar -jenkins.war ; soit en téléchargeant le .zip (windows)
+   * Pour télécharger : https://jenkins.io/index.html   : on peut le télécharger soit en .war que l'on démarera par la commande : java -jar -jenkins.war ; soit en téléchargeant le .zip (windows)
     
+   * Dézippez le .zip et ouvrez le fichier .msi. Une fois que l'installation est finie, jenkins se lancera sur votre navigateur en localhost:8080
+   * Dans ce qui suit, on va configurer Jenkins :
+      * Une conf type que vous pourriez utiliser : http://www.vogella.com/tutorials/Jenkins/article.html
+      * Tout d'abord : 
