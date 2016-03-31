@@ -3,7 +3,19 @@ Mettre en place un environnement d'intégration continue Jenkins (Maven, Git)
 
 # Dans ce qui suit, on mettra un environnement d'intégration contrinue, étape par étape: on aura besoin d'installer beaucoup d'outils dont Jenkins, Git, Maven, Eclipse ...etc
 
-1) - Installer Java sur votre machine /n
-2) - Installer github en ligne de commande et/ou github desktop (github GUI) : https://desktop.github.com/  /n
-3) - Créer un compte github et connectez-vous sur l'interface github installée précédement /n
-4) - Configurer les clefs SSH : permet d'établir une connexion sécurisée entre votre poste de travail et github. /n
+# Installer Java et Git sur votre machine 
+* 2) - Installer github en ligne de commande et/ou github desktop (github GUI) : https://desktop.github.com/  
+* 3) - Créer un compte github et connectez-vous sur l'interface github installée précédement 
+* 4) - Configurer les clefs SSH : permet d'établir une connexion sécurisée entre votre poste de travail et github. 
+    * Pour se faire je vous invite à vérifier tout d'abord si vous n'aviez pas déjà une clef ssh                      :https://help.github.com/articles/generating-an-ssh-key/
+    * ouvrez la console bash de votre git installé et insérer la commande : ls -al ~/.ssh, et vérifier si vous avez des fichiers de format .ssh, si n'y a aucun fichier , il va falloir générer la clef
+    * Pour générer la clef : ssh-keygen -t rsa -b 4096 -C "your_email@example.com", l'addresse mail de votre compte  github
+    * Par la suite, il faut s'assurer que l'agent de sécurisation SSH est démarré, pour se faire : eval "$(ssh-agent -s)", cela va vous afficher "Agent pid #number"
+    * Associer la clef ssh à l'agent SSH : ssh-add ~/.ssh/id_rsa
+    * Associer la clef SSH à votre compte Github : https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+    * Tester la connexion ssh  : ssh -T addresse@mail
+* 5) Récupérer un projet Exemple que l'on utilisera dans cette démo et en faire un FORK : 
+    * https://github.com/wakaleo/game-of-life
+    * le cloner sur votre poste : git clone git@github.com:<username>/game-of-life.git
+    
+    
